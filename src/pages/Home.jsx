@@ -1,5 +1,5 @@
 import { useAccount } from "wagmi";
-import { Owner, TokenInfo, TokenTransferForm } from "../components";
+import { Owner, TokenInfo, TokenInfo_con_Map, TokenTransferForm } from "../components";
 import {
   ErrorInfo,
   LoadingSpinner,
@@ -13,8 +13,9 @@ export default function Home() {
   if (isConnecting) return <div>Connecting...</div>;
   if (isDisconnected) return <div>Disconnected</div>;
 
+
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 pb-20 px-10">
       <div>Connected Wallet: {address}</div>
       <LoadingSpinner className="h-10 w-10" />
       <div>
@@ -32,6 +33,8 @@ export default function Home() {
       <Owner />
 
       <TokenInfo />
+
+      <TokenInfo_con_Map/>
       
       <TokenTransferForm />
     </div>

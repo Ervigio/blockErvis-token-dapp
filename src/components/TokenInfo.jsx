@@ -18,7 +18,7 @@ function TokenInfoItem({ label, value }) {
 
 TokenInfoItem.propTypes = {
   label: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default function TokenInfo() {
